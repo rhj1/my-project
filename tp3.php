@@ -36,7 +36,7 @@ if (isset($_POST["prenom"])) {
 
 <br>
 
-<?php
+<?php 
 $cookie_name = "user_name";
 $cookie_value = "Kanasayrus";
 setcookie($cookie_name, $cookie_value, time() + 3600, "/");
@@ -63,23 +63,22 @@ echo $_SERVER['REMOTE_ADDR'] . "<br>";
 <?php
 session_start();
 
-// Display success message if set, then unset it
 if (isset($_SESSION['success'])) {
     echo $_SESSION['success'] . "<br>";
     unset($_SESSION['success']);
 }
 
-// Display error message if set, then unset it
+
 if (isset($_SESSION['err'])) {
     echo $_SESSION['err'] . "<br>";
     unset($_SESSION['err']);
 }
 
-// Set new session messages
+
 $_SESSION['success'] = 'Compte créé avec succès';
 $_SESSION['err'] = 'Mot de passe incorrect';
 ?>
 
 
 
-<!-- git commande install depuis navigateur  -->
+
